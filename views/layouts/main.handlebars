@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Chronicles</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <header >
+    <h1 class="devCode">DevCode Haven</h1>
+    <div class="logo-container-flex"></div>
+      <div class="logo-container"></div>
+  </div>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    <a href="/blog_form">Post New Blog</a>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    <aside>
+      <h2 class="asideText">Latest news and trends in tech world</h2>
+    </aside>
+    <div class="gallery">
+      {{!-- <div class="content"> --}}
+         {{{body}}}
+      {{!-- </div> --}}
+    </div>
+
+</body>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
